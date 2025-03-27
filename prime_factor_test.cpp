@@ -6,18 +6,22 @@
 using std::vector;
 using namespace testing;
 
-
-TEST(PrimeFactorTestGroup, tc1)
+class PrimeFactorTestFixture : public Test
 {
+public:
 	PrimeFactor pf;
 	vector<int> expected = { };
+};
+
+
+TEST_F(PrimeFactorTestFixture, tc1)
+{
 	EXPECT_EQ(expected, pf.of(1));
 }
 
-TEST(PrimeFactorTestGroup, tc2)
+TEST_F(PrimeFactorTestFixture, tc2)
 {
-	PrimeFactor pf;
-	vector<int> expected = { 2 };
+	expected.push_back(2);
 	EXPECT_EQ(expected, pf.of(2));
 }
 
