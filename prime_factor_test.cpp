@@ -38,6 +38,13 @@ TEST_F(PrimeFactorTestFixture, tc4)
 	EXPECT_EQ(expected, pf.of(4));
 }
 
+TEST_F(PrimeFactorTestFixture, tc6)
+{
+	expected.push_back(2);
+	expected.push_back(3);
+	EXPECT_EQ(expected, pf.of(6));
+}
+
 
 int main()
 {
