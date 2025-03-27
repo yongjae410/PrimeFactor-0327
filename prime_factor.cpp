@@ -14,8 +14,11 @@ public:
 		{
 			if (num == 4)
 			{
-				result.push_back(2);
-				result.push_back(2);
+				while (num % 2 == 0)
+				{
+					result.push_back(2);
+					num /= 2;
+				}
 			}
 			else
 			{
